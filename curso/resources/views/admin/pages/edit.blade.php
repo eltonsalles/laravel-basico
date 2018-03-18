@@ -7,5 +7,5 @@
         @include('admin.pages.form')
     </form>
 
-    <a href="{{ route('pages.index') }}" class="btn btn-default btn-xs">voltar</a>
+    <a href="{{ route('pages.show', $page->id) }}" class="btn btn-default btn-xs">voltar</a>
 @endcomponent

@@ -11,7 +11,7 @@
     {!! $page->body !!}
 
     <a href="{{ route('pages.index') }}" class="btn btn-default btn-xs">voltar</a>
-    <a href="{{ route('pages.edit', 1) }}" class="btn btn-default btn-xs">editar</a>
+    <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-default btn-xs">editar</a>
     <form action="{{ route('pages.destroy', $page->id) }}" class="form-horizontal" method="post" style="display: inline-block">
         {!! csrf_field() !!}
         <input type="hidden" name="_method" value="DELETE">
