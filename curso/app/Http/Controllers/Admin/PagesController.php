@@ -48,7 +48,8 @@ class PagesController extends Controller
      */
     public function show($id)
     {
-        return view('admin.pages.show');
+        $page = Page::findOrFail($id);
+        return view('admin.pages.show', compact('page'));
     }
 
     /**
@@ -59,7 +60,8 @@ class PagesController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.pages.edit');
+        $page = Page::findOrFail($id);
+        return view('admin.pages.edit', compact('page'));
     }
 
     /**
